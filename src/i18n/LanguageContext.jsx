@@ -4,7 +4,8 @@ import { translations } from './translations';
 const LanguageContext = createContext(null);
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem('bb_lang') || 'ta');
+  // டீஃபால்ட் மொழி ஆங்கிலம் ('en') என மாற்றப்பட்டுள்ளது
+  const [lang, setLang] = useState(() => localStorage.getItem('bb_lang') || 'en');
 
   const toggleLang = () => {
     setLang((prev) => {
