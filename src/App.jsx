@@ -3,6 +3,7 @@ import { supabase } from './supabaseClient';
 import { useLanguage } from './i18n/LanguageContext';
 import Navbar from './components/Navbar';
 import AdBanner from './components/AdBanner';
+import NativeAdBanner from './components/NativeAdBanner';
 import ContestantList from './components/ContestantList';
 import LiveChat from './components/LiveChat';
 
@@ -157,6 +158,9 @@ function App() {
               hasVotedToday={hasVotedToday}
             />
           )}
+
+          {/* Native Banner Ad placed right below Voting Grid */}
+          <NativeAdBanner />
 
           {/* Safe Contestants Section (Not Nominated This Week) */}
           {safeContestants.length > 0 && (
